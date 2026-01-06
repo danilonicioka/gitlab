@@ -1,0 +1,60 @@
+# Default values for gitlab-chart.
+# This is a YAML-formatted file.
+
+global:
+  edition: ee
+  hosts:
+    domain: example.com
+    https: true
+  # enterpriseImages:
+  #   # Default repositories used to pull Gitlab Enterprise Edition images.
+  #   # See the image.repository and workhorse.repository template helpers.
+  #   migrations:
+  #     # repository: danilonicioka/gitlab-toolbox-ee
+  #     repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee
+  #   sidekiq:
+  #     # repository: danilonicioka/gitlab-sidekiq-ee
+  #     repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee
+  #   toolbox:
+  #     repository: danilonicioka/gitlab-toolbox-ee
+  #     # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee
+  #   webservice:
+  #     # repository: danilonicioka/gitlab-webservice-ee
+  #     repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee
+  #   workhorse:
+  #     # repository: danilonicioka/gitlab-workhorse-ee
+  #     repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-workhorse-ee
+  #   geo-logcursor:
+  #     # repository: danilonicioka/gitlab-geo-logcursor
+  #     repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-geo-logcursor
+  communityImages:
+    # Default repositories used to pull Gitlab Community Edition images.
+    # See the image.repository and workhorse.repository template helpers.
+    migrations:
+      repository: danilonicioka/gitlab-toolbox-ce
+      # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ce
+    sidekiq:
+      repository: danilonicioka/gitlab-sidekiq-ce
+      # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ce
+    toolbox:
+      repository: danilonicioka/gitlab-toolbox-ce
+      # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ce
+    webservice:
+      repository: danilonicioka/gitlab-webservice-ce
+      # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ce
+    workhorse:
+      repository: danilonicioka/gitlab-workhorse-ce
+      # repository: registry.gitlab.com/gitlab-org/build/cng/gitlab-workhorse-ce
+  clickhouse:
+    enabled: false
+    # main:
+    #   username: gitlab
+    #   password:
+    #     secret:
+    #     key:
+    #   database: gitlab_clickhouse_main_production
+    #   url:
+
+
+gitlab-runner:
+  enabled: false
